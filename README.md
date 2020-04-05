@@ -1,6 +1,6 @@
 # See your respositories on GitHub in an easy peasy way.
 
--Login screen:
+- Login screen:
 ![](assets/login.png)
 
 - Logged screen:
