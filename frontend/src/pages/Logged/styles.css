@@ -1,0 +1,109 @@
+.logged-container {
+    margin: auto 40px;
+    padding: 20px auto;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background: #40bf40;
+    height: 90px;
+    color: #FFF;
+    
+}
+
+.logged-container svg {
+    color: #FFF;
+    transition: all 0.2s;
+}
+
+.logged-container svg:hover {
+    opacity: 0.5;
+}
+
+.logged-container header{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 400px;
+    
+}
+
+main {
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    margin-left: 30px;
+}
+
+main ul {
+    margin: 10px 10px;
+    width: 490px;
+    height: 400px;
+    background: #FFF;
+    border-radius: 5px;
+    padding: 10px 10px;
+    display: inline-block;
+    float: left; 
+
+}
+
+main ul .repo-container {
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+main ul .repo-container header {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+   
+    
+}
+
+main ul .repo-container header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+main ul .repo-container span{
+    width: 100%;   
+    display: flex;
+    margin-top: 30px;
+}
+
+main ul .repo-container footer {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(104, 98, 100);
+    text-align: center;
+    align-items: center;
+    
+}
+
+main ul .repo-container footer span {
+    text-align: center;
+
+}
+
+main ul .repo-container a {
+    transition: all 0.2s;
+    text-decoration: none;
+    margin-top: 190px;
+    
+}
+
+
+main ul .repo-container a:hover {
+    opacity: 0.5;
+}
+
+.list-container  {
+    list-style: none;
+}
+
+
+
+
