@@ -16,10 +16,11 @@ export default function Login() {
         const data = {
             login
         };
+        
         try {
             const response = await api.post('/', data);
 
-            if(!response.data) {
+            if(!response.data.login) {
                 alert('Username not exists');
                 setLogin('');
             }

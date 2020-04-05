@@ -1,12 +1,12 @@
 .logged-container {
-    margin: auto 40px;
-    padding: 20px auto;
-    border-radius: 5px;
+    width: 100%;
+    padding: 20px 20px;
     display: flex;
     align-items: center;
-    background: #40bf40;
-    height: 90px;
+    background: #000;
+    height: 100px;
     color: #FFF;
+    justify-content: space-between;
     
 }
 
@@ -19,12 +19,17 @@
     opacity: 0.5;
 }
 
-.logged-container header{
+.logged-container button {
+    background: transparent;
+    border: 0;
+}
+
+.logged-container span {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
     text-align: center;
-    margin-left: 400px;
+
     
 }
 
@@ -44,6 +49,7 @@ main ul {
     padding: 10px 10px;
     display: inline-block;
     float: left; 
+    border: 1px solid #000;
 
 }
 
@@ -51,14 +57,14 @@ main ul .repo-container {
     font-size: 16px;
     text-align: center;
     
+    
 }
 
 main ul .repo-container header {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     display: flex;
-    justify-content: space-between;
-   
+    justify-content: space-between;   
     
 }
 
@@ -88,10 +94,14 @@ main ul .repo-container footer span {
 
 }
 
-main ul .repo-container a {
+main ul .repo-container  a {
+    width: 100%;
     transition: all 0.2s;
     text-decoration: none;
     margin-top: 190px;
+    color: #40bf40;
+    font-weight:bold;
+    font-size: 16px;
     
 }
 

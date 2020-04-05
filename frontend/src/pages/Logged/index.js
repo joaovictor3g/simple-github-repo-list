@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 
-import { FiPower, FiArrowLeft } from 'react-icons/fi';
+import { FiArrowLeft } from 'react-icons/fi';
+import { GoMarkGithub } from 'react-icons/go';
 
 import './styles.css';
 
 export default function Logged(props) {
     const [repos, setRepos] = useState([]);
+    const [link, setLink] = useState('');
     const { id } = props.match.params;
 
     useEffect(() => {
@@ -19,19 +21,29 @@ export default function Logged(props) {
     async function userIsLogged(e) {
         //e.preventDefault();
         const response = await api.get(`/list/${id}`);
+        
         setRepos(response.data);
 
-        console.log(response.data);
-    }  
+        console.log(response.data)
+        
+        setLink(response.data[0].owner.html_url);
+    }
+    
+    function openNewTabOnGitHubProfile() {
+        window.open(link);
+    }
 
     return (
         <>
-            <div className="logged-container">
+            <header className="logged-container">
                 <Link to="/">
                     <FiArrowLeft size={33} ></FiArrowLeft>
                 </Link>
-                <header>Your Repositories, {id}</header>
-            </div>
+                <span>Your Repositories, {id}</span>
+                <button onClick={openNewTabOnGitHubProfile}>
+                    <GoMarkGithub size={40} ></GoMarkGithub>
+                </button>
+            </header>
             <main>
                 {repos.map(repo => (
                     <ul key={repo.id} className="list-container">
@@ -42,9 +54,12 @@ export default function Logged(props) {
                                 
                             </header>
                             <span className="description">{repo.description}</span>
-                            <a href={repo.html_url}>Acesse este repositório.</a>
+                            
+                                <a href={repo.html_url}>Acesse este repositório.</a>
+                            
+                            
                             <footer>
-                                <span>{repo.language || 'Not a language defined'}</span>
+                                <span>{repo.language || 'Undefined language'}</span>
                                 {('Not a license' && !repo.license) || repo.license.name}                                    
                             </footer>
                         </div>

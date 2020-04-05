@@ -5,7 +5,7 @@ module.exports = {
         const { login } = req.body;
 
         const response = await axios.get(`https://api.github.com/users/${login}`);
-        
+
         return res.json(response.data);
     },
 
