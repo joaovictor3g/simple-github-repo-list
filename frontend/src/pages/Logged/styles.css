@@ -1,6 +1,6 @@
 .logged-container {
     width: 100%;
-    padding: 20px 20px;
+    padding: 20px 40px;
     display: flex;
     align-items: center;
     background: #000;
@@ -22,7 +22,14 @@
 .logged-container button {
     background: transparent;
     border: 0;
+  
 }
+
+.logged-container button img {
+    width: 60px;
+    border-radius: 5px;
+}
+
 
 .logged-container span {
     text-align: center;
@@ -48,8 +55,7 @@ main ul {
     border-radius: 5px;
     padding: 10px 10px;
     display: inline-block;
-    float: left; 
-    border: 1px solid #000;
+    float: left;
 
 }
 
@@ -78,6 +84,10 @@ main ul .repo-container span{
     width: 100%;   
     display: flex;
     margin-top: 30px;
+}
+
+main ul .repo-container span p {
+    font-weight: bold;
 }
 
 main ul .repo-container footer {

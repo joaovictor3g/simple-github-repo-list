@@ -12,6 +12,7 @@ import './styles.css';
 export default function Logged(props) {
     const [repos, setRepos] = useState([]);
     const [link, setLink] = useState('');
+    const [img, setImage] = useState('');
     const { id } = props.match.params;
 
     useEffect(() => {
@@ -27,6 +28,7 @@ export default function Logged(props) {
         console.log(response.data)
         
         setLink(response.data[0].owner.html_url);
+        setImage(response.data[0].owner.avatar_url);
     }
     
     function openNewTabOnGitHubProfile() {
@@ -41,7 +43,7 @@ export default function Logged(props) {
                 </Link>
                 <span>Your Repositories, {id}</span>
                 <button onClick={openNewTabOnGitHubProfile}>
-                    <GoMarkGithub size={40} ></GoMarkGithub>
+                    <GoMarkGithub size={40} />
                 </button>
             </header>
             <main>
@@ -53,14 +55,11 @@ export default function Logged(props) {
                                 {repo.name}
                                 
                             </header>
-                            <span className="description">{repo.description}</span>
-                            
-                                <a href={repo.html_url}>Acesse este repositório.</a>
-                            
-                            
+                            <span className="description"><p>Description:</p>  {repo.description || 'Null'}</span>
+                            <a href={repo.html_url}>Acesse este repositório.</a>
                             <footer>
                                 <span>{repo.language || 'Undefined language'}</span>
-                                {('Not a license' && !repo.license) || repo.license.name}                                    
+                                {('Not a license' && !repo.license) || repo.license.name}                                   
                             </footer>
                         </div>
                     </ul>
