@@ -75,3 +75,38 @@
     border: 1px solid #000;
 
 }
+
+@media (max-width: 500px) {
+    .github-image svg {
+        width: 40px;
+        text-align: center;
+    }
+
+    .github-image p {
+        font-size: 18px;
+    }
+    .login-container {
+        width: 300px;
+        height: 200px;
+    }
+
+    .login-container header {
+        font-size: 14px;
+    }
+
+    .login-container input {
+        height: 30px;
+    }
+
+    .footer {
+        width: 300px;
+        height: 70px;
+        font-size: 14px; 
+
+    }
+
+    .login-container button {
+        margin-top: 20px;
+        height: 30px;
+    }
+}

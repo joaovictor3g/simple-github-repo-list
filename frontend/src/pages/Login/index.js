@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
 
-import { GoMarkGithub } from 'react-icons/go';
+import Footer from '../../components/Footer';
 
 import './styles.css';
 
@@ -25,6 +25,8 @@ export default function Login() {
                 setLogin('');
             }
 
+            localStorage.setItem('github_username', response.data.name || response.data.login)
+
             history.push(`/listrepos/${response.data.login}`);
             
         } catch(err) {
@@ -34,25 +36,26 @@ export default function Login() {
     
     return (
         <>
-        <header className="github-image">
-            <GoMarkGithub size={50} />
-            <p>See your Repositories</p>
-        </header>
-        <form onSubmit={signIn}>
-            <div className="login-container">
-                <header>Sign in to see your Repos!</header>
-                <p>Username</p>
-                <input 
-                    onChange={e => setLogin(e.target.value)}
-                    value={login}   
-                />
+            <header className="github-image">
 
-                <button className="sign-button" type="submit" >Sign in</button>
+                <p>See your Repositories</p>
+            </header>
+            <form onSubmit={signIn}>
+                <div className="login-container">
+                    <header>Sign in to see your Repos!</header>
+                    <p>Username</p>
+                    <input 
+                        onChange={e => setLogin(e.target.value)}
+                        value={login}   
+                    />
+
+                    <button className="sign-button" type="submit" >Sign in</button>
+                </div>
+            </form>
+            <div className="footer">
+                New to GitHub?<a href="https://github.com/join">Create an account.</a>
             </div>
-        </form>
-        <div className="footer">
-            New to GitHub?<a href="https://github.com/join">Create an account.</a>
-        </div>
+            <Footer />
         </>
     );
 }

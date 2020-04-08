@@ -1,6 +1,6 @@
 .logged-container {
     width: 100%;
-    padding: 20px 40px;
+    padding: 20px 10px;
     display: flex;
     align-items: center;
     background: #000;
@@ -40,29 +40,24 @@
     
 }
 
-main {
-    margin: 0 auto;
-    padding: 0 auto;
-    text-align: center;
-    margin-left: 30px;
-}
-
 main ul {
+    
     margin: 10px 10px;
-    width: 490px;
-    height: 400px;
+    width: 505px;
+    height: 500px;
     background: #FFF;
     border-radius: 5px;
     padding: 10px 10px;
-    display: inline-block;
+    display: block;
     float: left;
+    position: relative;
+   
 
 }
 
 main ul .repo-container {
     font-size: 16px;
     text-align: center;
-    
     
 }
 
@@ -80,39 +75,59 @@ main ul .repo-container header img {
     border-radius: 6px;
 }
 
-main ul .repo-container span{
+main ul .repo-container .description {
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+main ul .repo-container span {
     width: 100%;   
-    display: flex;
+    display: block;
     margin-top: 30px;
+    font-size: 20px;
 }
 
 main ul .repo-container span p {
     font-weight: bold;
+    display: block;
 }
 
-main ul .repo-container footer {
-    display: flex;
+main ul .repo-container .language-license {
+    display: table;
     justify-content: space-between;
     color: rgb(104, 98, 100);
     text-align: center;
     align-items: center;
+    width: 100%;
+    height: 80px;
+    border-collapse: collapse;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #FFF;
     
 }
 
-main ul .repo-container footer span {
+main ul .repo-container .language-license .header-tr {
+    background: #40bf40;
+    font-size: 18px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+main ul .repo-container .language-license span {
     text-align: center;
 
 }
 
-main ul .repo-container  a {
-    width: 100%;
-    transition: all 0.2s;
+main ul .repo-container a {
+    position: absolute;
+    bottom: 8px;
+    height: auto;
+    right: 0;
     text-decoration: none;
-    margin-top: 190px;
     color: #40bf40;
-    font-weight:bold;
-    font-size: 16px;
-    
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -120,10 +135,266 @@ main ul .repo-container a:hover {
     opacity: 0.5;
 }
 
+
+main .no-repo-found {
+    font-size: 40px;
+    font-weight: bold;
+    color: #808080;
+    text-align: center;
+    align-items: center;
+    display: block;
+    text-decoration: none;
+}
+
 .list-container  {
     list-style: none;
 }
 
+@media screen and (max-width: 1280px) and (min-width: 1025px) {
+    main ul {
+        float: left;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 961px) {
+    main ul {
+        float: left;
+        width: 483px;
+    }
+}
+
+@media screen and (max-width: 960px) and (min-width: 801px) {
+    main ul {
+        text-align: center;
+        align-items: center;
+        float: left;
+        width: 293px;
+    }
+
+    .logged-container span {
+        font-size: 23px;
+    }
+
+    main ul .repo-container header{
+        font-size: 18px;
+        display: block;
+        
+    }
+    main ul .repo-container header p {
+        display: block;
+        font-size: 20px;
+    }
+
+    main ul .repo-container span {
+        display: block;
+        font-size: 16px;
+    }
+
+    main ul .repo-container  footer {
+        display: block;
+    }
+   
+}
+
+@media screen and (max-width: 800px) and (min-width: 769px) {
+    main ul {
+        text-align: center;
+        align-items: center;
+        float: left;
+        width: 370px;
+    
+    }
+    .logged-container span {
+        font-size: 23px;
+    }
+
+    main ul .repo-container header{
+        font-size: 18px;
+        display: block;
+        
+    }
+    main ul .repo-container header p {
+        display: block;
+        font-size: 24px;
+    }
+
+    main ul .repo-container span {
+        display: block;
+    }
+
+    main ul .repo-container  footer {
+        display: block;
+    }
+   
+}
+
+@media screen and (max-width: 768px) and (min-width: 601px) {
+    main ul {
+        text-align: center;
+        align-items: center;
+        width: 355px;
+    
+    }
+
+    .logged-container span {
+        font-size: 23px;
+    }
+
+    main ul .repo-container header{
+        font-size: 22px;
+        display: block;
+        
+    }
+    main ul .repo-container header p {
+        display: block;
+    }
+
+    main ul .repo-container span {
+        display: block;
+    }
+
+    main ul .repo-container  footer {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) and (min-width: 401px) {
+    main {
+        padding-right: 20px ;
+    }
+    
+    main ul {
+        clear: both;
+        text-align: center;
+        align-items: center;
+        display:block;
+        float: none;
+        width: 100%;
+    
+    }
+
+    main ul .repo-container {
+        text-align: center;
+    }
+
+    .logged-container span {
+        font-size: 20px;
+    }
+
+    main ul .repo-container header{
+        font-size: 18px;
+        padding: 0 10px;
+        
+    }
+    main ul .repo-container header p {
+        display: block;
+        font-size: 22px;
+
+    }
+
+    main ul .repo-container header svg {
+        width: 30px;
+    }
+
+    main ul .repo-container span {
+        display: block;
+    }
+
+    main ul .repo-container  footer {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 321px) and (min-width: 0px) {
+    main {
+        margin: 0 15px;
+        padding-right: 19px;
+        position: relative;
+    }
+    
+    main ul {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+    
+    }
+
+    main ul .repo-container {
+        text-align: center;
+    }
+
+    .logged-container {
+        padding: 0 10px;
+        height: 50px;
+    }
+
+    .logged-container span {
+        font-size: 15px;
+    }
+
+    .logged-container svg {
+        width: 25px;
+    }
+
+    main ul .repo-container header{
+        font-size: 18px;
+        display: block;
+        
+    }
+    main ul .repo-container header p {
+        display: block;
+        font-size: 18px;
+    }
 
 
+    main ul .repo-container span {
+        display: block;
+    }
 
+    main ul .repo-container  footer {
+        display: block;
+    }
+
+    main .list-container .repo-container span {
+        font-size: 16px;
+    }
+
+    main .list-container .repo-container .language-license span p {
+       display: block;
+    }
+
+    main .no-repo-found {
+        font-size: 30px;
+        font-weight: bold;
+        
+       
+    }
+
+    main ul .repo-container  a {
+        font-size: 15px;
+    }
+
+    main ul .repo-container  a svg {
+        width: 15px;
+        
+
+    }
+
+    main ul .repo-container .language-license span svg {
+        width: 18px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    main ul .repo-container .language-license {
+        font-size: 15px;
+    }
+
+    main ul .repo-container .language-license tbody tr {
+        font-size: 15px;
+    }
+
+}
+ 

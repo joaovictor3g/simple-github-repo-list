@@ -1,0 +1,23 @@
+.footer-final {
+    display: block;
+    text-align: center;
+    
+    
+}
+
+.footer-final p {
+    display: block;
+    font-weight: bold;
+}
+
+.footer-final button {
+    background: transparent;
+    border: 0;
+    text-align: center;
+    transition: all 0.2s;
+    
+}
+
+.footer-final button:hover {
+    opacity: 0.5;
+} 
