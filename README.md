@@ -4,7 +4,9 @@
 ![](assets/login.png)
 
 - Logged screen:
-![](assets/logado.png)
+![](assets/desktop.png)
+
+
 
 ### Project
 A easier way to see repositories on GitHub and navigate to them.
