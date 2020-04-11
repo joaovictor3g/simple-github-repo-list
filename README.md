@@ -14,7 +14,7 @@ Another way to see your repositories on GitHub and navigate to them, using publi
 ### How to run?
 - Clone this repository.
 - Go to cd backend and `npm install`, to install the dependencies and `npm run dev` to start.
-- Go to cd frontende and `npm install` and `npm start` to start.   
+- Go to cd frontend and `npm install` and `npm start` to start.   
 
 ### How to contribute?
 - Fork this repository;
