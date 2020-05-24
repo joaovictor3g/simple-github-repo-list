@@ -58,7 +58,9 @@ export default function Logged(props) {
                                 <p>{repo.name}</p>
                                 
                             </header>
-                            <span className="description"><p>Description:</p>  {repo.description || 'Null'}</span>
+                            { repo.description &&
+                                <span className="description"><p>Description:</p>  {repo.description}</span>
+                            }
                             <table border="1" className="language-license">
                                 <tbody>
                                     <tr className="header-tr">
