@@ -15,6 +15,7 @@ Another way to see your repositories on GitHub and navigate to them, using publi
 - Clone this repository.
 - Go to cd backend and `npm install`, to install the dependencies and `npm run dev` to start.
 - Go to cd frontend and `npm install` and `npm start` to start.
+- Open `http://localhost:3000`, in browser.
 - There is a limit on requests to the GitHub public API, which is 60 per hour, so if you are going to test be careful. :v   
 
 ### How to contribute?
